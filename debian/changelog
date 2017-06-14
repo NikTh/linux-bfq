@@ -1,175 +1,44 @@
-linux (4.9.0-310.201706072139) xenial; urgency=medium
+linux (4.11.0-50.201706142341) xenial; urgency=medium
 
-  * Upstream:      v4.9.31
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     300Hz
-  * Preemption:    Low-Latency Desktop
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
+  * Upstream 4.11.5
+  * I/O block scheduler: BFQ v8r11 (default)
+  * Low-Latency Desktop
+  * Frequency Timer: 300Hz
 
- -- NikTh <nick-athens30@ubuntu.com>  Wed, 07 Jun 2017 21:39:56 +0300
+ -- NikTh <nick-athens30@ubuntu.com>  Wed, 14 Jun 2017 23:41:24 +0300
 
-linux (4.9.0-300.201705252031) xenial; urgency=medium
+linux (4.11.0-40.201706072123) xenial; urgency=medium
 
-  * Upstream:      v4.9.30
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     300Hz
-  * Preemption:    Low-Latency Desktop
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
+  * Upstream 4.11.4
+  * I/O block scheduler: BFQ v8r11 (default)
+  * Low-Latency Desktop
+  * Frequency Timer: 300Hz
 
- -- NikTh <nick-athens30@ubuntu.com>  Thu, 25 May 2017 20:31:32 +0300
+ -- NikTh <nick-athens30@ubuntu.com>  Wed, 07 Jun 2017 21:23:26 +0300
 
-linux (4.9.0-290.201705201716) xenial; urgency=medium
+linux (4.11.0-30.201705252023) xenial; urgency=medium
 
-  * Upstream:      v4.9.29
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     300Hz
-  * Preemption:    Low-Latency Desktop
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
+  * Upstream 4.11.3
+  * I/O block scheduler: BFQ v8r11 (default)
+  * Low-Latency Desktop
+  * Frequency Timer: 300Hz
 
- -- NikTh <nick-athens30@ubuntu.com>  Sat, 20 May 2017 17:16:46 +0300
+ -- NikTh <nick-athens30@ubuntu.com>  Thu, 25 May 2017 20:23:28 +0300
 
-linux (4.9.0-280.201705142117) xenial; urgency=medium
+linux (4.11.0-20.201705201918) xenial; urgency=medium
 
-  * Upstream:      v4.9.28
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     300Hz
-  * Preemption:    Low-Latency Desktop
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
+  * Upstream 4.11.2
+  * I/O block scheduler: BFQ v8r11 (default)
+  * Low-Latency Desktop
+  * Frequency Timer: 300Hz
 
+ -- NikTh <nick-athens30@ubuntu.com>  Sat, 20 May 2017 19:18:05 +0300
 
- -- NikTh <nick-athens30@ubuntu.com>  Sun, 14 May 2017 21:17:33 +0300
+linux (4.11.0-10.201705152321) xenial; urgency=medium
 
-linux (4.9.0-270.201705092017) xenial; urgency=medium
+  * Upstream 4.11.1
+  * I/O block scheduler: BFQ v8r11 (default)
+  * Low-Latency Desktop
+  * Frequency Timer: 300Hz
 
-  * Upstream:      v4.9.27
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     300Hz
-  * Preemption:    Low-Latency Desktop
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Tue, 09 May 2017 20:17:45 +0300
-
-linux (4.9.0-260.201705032151) xenial; urgency=medium
-
-  * Upstream:      v4.9.26
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     300Hz
-  * Preemption:    Low-Latency Desktop
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Wed, 03 May 2017 21:51:01 +0300
-
-linux (4.9.0-250.201704272240) xenial; urgency=medium
-
-  * Upstream:      v4.9.25
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     250Hz
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Thu, 27 Apr 2017 22:40:36 +0300
-
-linux (4.9.0-240.201704220011) xenial; urgency=medium
-
-  * Upstream:      v4.9.24
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     250Hz
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Sat, 22 Apr 2017 00:11:14 +0300
-
-linux (4.9.0-230.201704181620) xenial; urgency=medium
-
-  * Upstream:      v4.9.23
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     250Hz
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Tue, 18 Apr 2017 16:20:20 +0300
-
-linux (4.9.0-220.201704131444) xenial; urgency=medium
-
-  * Upstream:      v4.9.22
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     250Hz
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Thu, 13 Apr 2017 14:44:18 +0300
-
-linux (4.9.0-210.201704102347) xenial; urgency=medium
-
-  * Upstream:      v4.9.21
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     250Hz
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Mon, 10 Apr 2017 23:47:26 +0300
-
-linux (4.9.0-200.201704010020) xenial; urgency=medium
-
-  * Upstream:      v4.9.20
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     250Hz
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Sat, 01 Apr 2017 00:20:58 +0300
-
-linux (4.9.0-190.201703302334) xenial; urgency=medium
-
-  * Upstream:      v4.9.19
-  * I/O Scheduler: BFQ (Default)
-  * CPU Scheduler: MuQSS (Default)
-  * Frequency:     100Hz
-  * Governor:      OnDemand (Default)
-  * Atheros HTC based wireless cards support (ath9k_htc): Enabled
-  * BUGFIX: Removed a wrong compilation warning (23a3965c19616da0b723f0a83288dfc76aace016)
-  * BUGIFX: Remove use of bfq queues after free (2da7edbb8f54b447c0b7dfa029ee4df580a6030e) 
-
- -- NikTh <nick-athens30@ubuntu.com>  Thu, 30 Mar 2017 23:34:28 +0300
+ -- NikTh <nick-athens30@ubuntu.com>  Mon, 15 May 2017 23:31:29 +0300
