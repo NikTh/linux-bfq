@@ -9,7 +9,7 @@ Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-trusty.git
 XS-Testsuite: autopkgtest
 #XS-Testsuite-Depends: gcc-4.7 binutils
 
-Package: linux-source-4.11.0
+Package: linux-source-4.9.0
 Architecture: all
 Section: devel
 Priority: optional
@@ -17,9 +17,9 @@ Provides: linux-source, linux-source-3
 Depends: ${misc:Depends}, binutils, bzip2, coreutils | fileutils (>= 4.0)
 Recommends: libc-dev, gcc, make
 Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
-Description: Linux kernel source for version 4.11.0 with Ubuntu patches
+Description: Linux kernel source for version 4.9.0 with Ubuntu patches
  This package provides the source code for the Linux kernel version
- 4.11.0.
+ 4.9.0.
  .
  This package is mainly meant for other packages to use, in order to build
  custom flavours.
@@ -39,23 +39,23 @@ Priority: optional
 Depends: ${misc:Depends}
 Conflicts: linux-doc-3
 Replaces: linux-doc-3
-Description: Linux kernel specific documentation for version 4.11.0
- This package provides the various documents in the 4.11.0 kernel
+Description: Linux kernel specific documentation for version 4.9.0
+ This package provides the various documents in the 4.9.0 kernel
  Documentation/ subdirectory.  These document kernel subsystems, APIs, device
  drivers, and so on.  See
  /usr/share/doc/linux-doc/00-INDEX for a list of what is
  contained in each file.
 
-Package: linux-headers-4.11.0-50
+Package: linux-headers-4.9.0-340
 Architecture: all
 Multi-Arch: foreign
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, coreutils | fileutils (>= 4.0)
-Description: Header files related to Linux kernel version 4.11.0
- This package provides kernel header files for version 4.11.0, for sites
+Description: Header files related to Linux kernel version 4.9.0
+ This package provides kernel header files for version 4.9.0, for sites
  that want the latest kernel headers. Please read
- /usr/share/doc/linux-headers-4.11.0-50/debian.README.gz for details
+ /usr/share/doc/linux-headers-4.9.0-340/debian.README.gz for details
 
 Package: linux-libc-dev
 Architecture: i386 amd64 armhf arm64 x32 powerpc ppc64el
@@ -78,22 +78,22 @@ Priority: optional
 Depends: ${misc:Depends}
 Conflicts: linux-lts-utopic-tools-common, linux-lts-vivid-tools-common
 Replaces: linux-tools (<= 2.6.32-16.25), linux-lts-utopic-tools-common, linux-lts-vivid-tools-common
-Description: Linux kernel version specific tools for version 4.11.0
+Description: Linux kernel version specific tools for version 4.9.0
  This package provides the architecture independent parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
  version PGKVER.
 
-Package: linux-tools-4.11.0-50
+Package: linux-tools-4.9.0-340
 Architecture: i386 amd64 armhf arm64 powerpc ppc64el
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-tools-common
-Description: Linux kernel version specific tools for version 4.11.0-50
+Description: Linux kernel version specific tools for version 4.9.0-340
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.11.0-50 on
+ version 4.9.0-340 on
  64 bit x86.
- You probabally want to install linux-tools-4.11.0-50-<flavour>.
+ You probabally want to install linux-tools-4.9.0-340-<flavour>.
 
 Package: linux-cloud-tools-common
 Architecture: all
@@ -104,34 +104,34 @@ Breaks: linux-tools-common (<< 3.13.0-8.28), hv-kvp-daemon-init (<< 3.13)
 Conflicts: linux-lts-utopic-cloud-tools-common, linux-lts-vivid-cloud-tools-common
 Replaces: linux-tools-common (<< 3.13.0-8.28), hv-kvp-daemon-init (<< 3.13), linux-lts-utopic-cloud-tools-common, linux-lts-vivid-cloud-tools-common
 Depends: ${misc:Depends}
-Description: Linux kernel version specific cloud tools for version 4.11.0
+Description: Linux kernel version specific cloud tools for version 4.9.0
  This package provides the architecture independent parts for kernel
  version locked tools for cloud tools for version PGKVER.
 
-Package: linux-cloud-tools-4.11.0-50
+Package: linux-cloud-tools-4.9.0-340
 Architecture: i386 amd64 armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-cloud-tools-common
-Description: Linux kernel version specific cloud tools for version 4.11.0-50
+Description: Linux kernel version specific cloud tools for version 4.9.0-340
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud tools for version 4.11.0-50 on
+ version locked tools for cloud tools for version 4.9.0-340 on
  64 bit x86.
- You probabally want to install linux-cloud-tools-4.11.0-50-<flavour>.
+ You probabally want to install linux-cloud-tools-4.9.0-340-<flavour>.
 
 
-Package: linux-image-4.11.0-50-bfq
+Package: linux-image-4.9.0-340-mub
 Architecture: i386 amd64
 Section: kernel
 Priority: optional
 Pre-Depends: dpkg (>= 1.10.24)
 Provides: linux-image, linux-image-3.0, fuse-module, kvm-api-4, redhat-cluster-modules, ivtv-modules
-Depends: ${misc:Depends}, ${shlibs:Depends}, initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Depends: ${misc:Depends}, ${shlibs:Depends}, initramfs-tools (>= 0.36ubuntu6)
 Conflicts: hotplug (<< 0.0.20040105-1)
 Recommends: grub-pc [i386 amd64 x32] | grub-efi-amd64 [amd64 x32] | grub-efi-ia32 [i386 amd64 x32] | grub [i386 amd64 x32] | lilo (>= 19.1) [i386 amd64 x32] | flash-kernel [armhf arm64] | grub-ieee1275 [ppc64el]
-Suggests: fdutils, linux-doc-4.11.0 | linux-source-4.11.0, linux-tools, linux-headers-4.11.0-50-bfq
-Description: Linux kernel image for version 4.11.0 on 64 bit x86 SMP
- This package contains the Linux kernel image for version 4.11.0 on
+Suggests: fdutils, linux-doc-4.9.0 | linux-source-4.9.0, linux-tools, linux-headers-4.9.0-340-mub
+Description: Linux kernel image for version 4.9.0 on 64 bit x86 SMP
+ This package contains the Linux kernel image for version 4.9.0 on
  64 bit x86 SMP.
  .
  Also includes the corresponding System.map file, the modules built by the
@@ -143,16 +143,16 @@ Description: Linux kernel image for version 4.11.0 on 64 bit x86 SMP
  Geared toward desktop and server systems.
  .
  You likely do not want to install this package directly. Instead, install
- the linux-bfq meta-package, which will ensure that upgrades work
+ the linux-mub meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-image-extra-4.11.0-50-bfq
+Package: linux-image-extra-4.9.0-340-mub
 Architecture: i386 amd64
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.11.0-50-bfq, crda (>=1.1.1-1ubuntu2) | wireless-crda
-Description: Linux kernel extra modules for version 4.11.0 on 64 bit x86 SMP
- This package contains the Linux kernel extra modules for version 4.11.0 on
+Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.9.0-340-mub, crda (>=1.1.1-1ubuntu2) | wireless-crda
+Description: Linux kernel extra modules for version 4.9.0 on 64 bit x86 SMP
+ This package contains the Linux kernel extra modules for version 4.9.0 on
  64 bit x86 SMP.
  .
  Also includes the corresponding System.map file, the modules built by the
@@ -164,30 +164,30 @@ Description: Linux kernel extra modules for version 4.11.0 on 64 bit x86 SMP
  Geared toward desktop and server systems.
  .
  You likely do not want to install this package directly. Instead, install
- the linux-bfq meta-package, which will ensure that upgrades work
+ the linux-mub meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-headers-4.11.0-50-bfq
+Package: linux-headers-4.9.0-340-mub
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-headers-4.11.0-50, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-4.9.0-340, ${shlibs:Depends}
 Provides: linux-headers, linux-headers-3.0
-Description: Linux kernel headers for version 4.11.0 on 64 bit x86 SMP
- This package provides kernel header files for version 4.11.0 on
+Description: Linux kernel headers for version 4.9.0 on 64 bit x86 SMP
+ This package provides kernel header files for version 4.9.0 on
  64 bit x86 SMP.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-4.11.0-50/debian.README.gz for details.
+ /usr/share/doc/linux-headers-4.9.0-340/debian.README.gz for details.
 
-Package: linux-image-4.11.0-50-bfq-dbgsym
+Package: linux-image-4.9.0-340-mub-dbgsym
 Architecture: i386 amd64
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}
 Provides: linux-debug
-Description: Linux kernel debug image for version 4.11.0 on 64 bit x86 SMP
- This package provides a kernel debug image for version 4.11.0 on
+Description: Linux kernel debug image for version 4.9.0 on 64 bit x86 SMP
+ This package provides a kernel debug image for version 4.9.0 on
  64 bit x86 SMP.
  .
  This is for sites that wish to debug the kernel.
@@ -196,28 +196,28 @@ Description: Linux kernel debug image for version 4.11.0 on 64 bit x86 SMP
  is uncompressed, and unstripped. This package also includes the
  unstripped modules.
 
-Package: linux-tools-4.11.0-50-bfq
+Package: linux-tools-4.9.0-340-mub
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-tools-4.11.0-50
-Description: Linux kernel version specific tools for version 4.11.0-50
+Depends: ${misc:Depends}, linux-tools-4.9.0-340
+Description: Linux kernel version specific tools for version 4.9.0-340
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.11.0-50 on
+ version 4.9.0-340 on
  64 bit x86.
 
-Package: linux-cloud-tools-4.11.0-50-bfq
+Package: linux-cloud-tools-4.9.0-340-mub
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-cloud-tools-4.11.0-50
-Description: Linux kernel version specific cloud tools for version 4.11.0-50
+Depends: ${misc:Depends}, linux-cloud-tools-4.9.0-340
+Description: Linux kernel version specific cloud tools for version 4.9.0-340
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud for version 4.11.0-50 on
+ version locked tools for cloud for version 4.9.0-340 on
  64 bit x86.
 
-Package: linux-udebs-bfq
+Package: linux-udebs-mub
 XC-Package-Type: udeb
 Section: debian-installer
 Architecture: i386 amd64

@@ -9,7 +9,7 @@ Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-trusty.git
 XS-Testsuite: autopkgtest
 #XS-Testsuite-Depends: gcc-4.7 binutils
 
-Package: linux-source-4.11.0
+Package: linux-source-4.9.0
 Architecture: all
 Section: devel
 Priority: optional
@@ -17,9 +17,9 @@ Provides: linux-source, linux-source-3
 Depends: ${misc:Depends}, binutils, bzip2, coreutils | fileutils (>= 4.0)
 Recommends: libc-dev, gcc, make
 Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
-Description: Linux kernel source for version 4.11.0 with Ubuntu patches
+Description: Linux kernel source for version 4.9.0 with Ubuntu patches
  This package provides the source code for the Linux kernel version
- 4.11.0.
+ 4.9.0.
  .
  This package is mainly meant for other packages to use, in order to build
  custom flavours.
@@ -39,23 +39,23 @@ Priority: optional
 Depends: ${misc:Depends}
 Conflicts: linux-doc-3
 Replaces: linux-doc-3
-Description: Linux kernel specific documentation for version 4.11.0
- This package provides the various documents in the 4.11.0 kernel
+Description: Linux kernel specific documentation for version 4.9.0
+ This package provides the various documents in the 4.9.0 kernel
  Documentation/ subdirectory.  These document kernel subsystems, APIs, device
  drivers, and so on.  See
  /usr/share/doc/linux-doc/00-INDEX for a list of what is
  contained in each file.
 
-Package: linux-headers-4.11.0-50
+Package: linux-headers-4.9.0-340
 Architecture: all
 Multi-Arch: foreign
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, coreutils | fileutils (>= 4.0)
-Description: Header files related to Linux kernel version 4.11.0
- This package provides kernel header files for version 4.11.0, for sites
+Description: Header files related to Linux kernel version 4.9.0
+ This package provides kernel header files for version 4.9.0, for sites
  that want the latest kernel headers. Please read
- /usr/share/doc/linux-headers-4.11.0-50/debian.README.gz for details
+ /usr/share/doc/linux-headers-4.9.0-340/debian.README.gz for details
 
 Package: linux-libc-dev
 Architecture: i386 amd64 armhf arm64 x32 powerpc ppc64el
@@ -78,22 +78,22 @@ Priority: optional
 Depends: ${misc:Depends}
 Conflicts: linux-lts-utopic-tools-common, linux-lts-vivid-tools-common
 Replaces: linux-tools (<= 2.6.32-16.25), linux-lts-utopic-tools-common, linux-lts-vivid-tools-common
-Description: Linux kernel version specific tools for version 4.11.0
+Description: Linux kernel version specific tools for version 4.9.0
  This package provides the architecture independent parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
  version PGKVER.
 
-Package: linux-tools-4.11.0-50
+Package: linux-tools-4.9.0-340
 Architecture: i386 amd64 armhf arm64 powerpc ppc64el
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-tools-common
-Description: Linux kernel version specific tools for version 4.11.0-50
+Description: Linux kernel version specific tools for version 4.9.0-340
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.11.0-50 on
+ version 4.9.0-340 on
  64 bit x86.
- You probabally want to install linux-tools-4.11.0-50-<flavour>.
+ You probabally want to install linux-tools-4.9.0-340-<flavour>.
 
 Package: linux-cloud-tools-common
 Architecture: all
@@ -104,34 +104,34 @@ Breaks: linux-tools-common (<< 3.13.0-8.28), hv-kvp-daemon-init (<< 3.13)
 Conflicts: linux-lts-utopic-cloud-tools-common, linux-lts-vivid-cloud-tools-common
 Replaces: linux-tools-common (<< 3.13.0-8.28), hv-kvp-daemon-init (<< 3.13), linux-lts-utopic-cloud-tools-common, linux-lts-vivid-cloud-tools-common
 Depends: ${misc:Depends}
-Description: Linux kernel version specific cloud tools for version 4.11.0
+Description: Linux kernel version specific cloud tools for version 4.9.0
  This package provides the architecture independent parts for kernel
  version locked tools for cloud tools for version PGKVER.
 
-Package: linux-cloud-tools-4.11.0-50
+Package: linux-cloud-tools-4.9.0-340
 Architecture: i386 amd64 armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-cloud-tools-common
-Description: Linux kernel version specific cloud tools for version 4.11.0-50
+Description: Linux kernel version specific cloud tools for version 4.9.0-340
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud tools for version 4.11.0-50 on
+ version locked tools for cloud tools for version 4.9.0-340 on
  64 bit x86.
- You probabally want to install linux-cloud-tools-4.11.0-50-<flavour>.
+ You probabally want to install linux-cloud-tools-4.9.0-340-<flavour>.
 
 
-Package: linux-image-4.11.0-50-bfq
+Package: linux-image-4.9.0-340-mub
 Architecture: i386 amd64
 Section: kernel
 Priority: optional
 Pre-Depends: dpkg (>= 1.10.24)
 Provides: linux-image, linux-image-3.0, fuse-module, kvm-api-4, redhat-cluster-modules, ivtv-modules
-Depends: ${misc:Depends}, ${shlibs:Depends}, initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Depends: ${misc:Depends}, ${shlibs:Depends}, initramfs-tools (>= 0.36ubuntu6)
 Conflicts: hotplug (<< 0.0.20040105-1)
 Recommends: grub-pc [i386 amd64 x32] | grub-efi-amd64 [amd64 x32] | grub-efi-ia32 [i386 amd64 x32] | grub [i386 amd64 x32] | lilo (>= 19.1) [i386 amd64 x32] | flash-kernel [armhf arm64] | grub-ieee1275 [ppc64el]
-Suggests: fdutils, linux-doc-4.11.0 | linux-source-4.11.0, linux-tools, linux-headers-4.11.0-50-bfq
-Description: Linux kernel image for version 4.11.0 on 64 bit x86 SMP
- This package contains the Linux kernel image for version 4.11.0 on
+Suggests: fdutils, linux-doc-4.9.0 | linux-source-4.9.0, linux-tools, linux-headers-4.9.0-340-mub
+Description: Linux kernel image for version 4.9.0 on 64 bit x86 SMP
+ This package contains the Linux kernel image for version 4.9.0 on
  64 bit x86 SMP.
  .
  Also includes the corresponding System.map file, the modules built by the
@@ -143,16 +143,16 @@ Description: Linux kernel image for version 4.11.0 on 64 bit x86 SMP
  Geared toward desktop and server systems.
  .
  You likely do not want to install this package directly. Instead, install
- the linux-bfq meta-package, which will ensure that upgrades work
+ the linux-mub meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-image-extra-4.11.0-50-bfq
+Package: linux-image-extra-4.9.0-340-mub
 Architecture: i386 amd64
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.11.0-50-bfq, crda (>=1.1.1-1ubuntu2) | wireless-crda
-Description: Linux kernel extra modules for version 4.11.0 on 64 bit x86 SMP
- This package contains the Linux kernel extra modules for version 4.11.0 on
+Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.9.0-340-mub, crda (>=1.1.1-1ubuntu2) | wireless-crda
+Description: Linux kernel extra modules for version 4.9.0 on 64 bit x86 SMP
+ This package contains the Linux kernel extra modules for version 4.9.0 on
  64 bit x86 SMP.
  .
  Also includes the corresponding System.map file, the modules built by the
@@ -164,30 +164,30 @@ Description: Linux kernel extra modules for version 4.11.0 on 64 bit x86 SMP
  Geared toward desktop and server systems.
  .
  You likely do not want to install this package directly. Instead, install
- the linux-bfq meta-package, which will ensure that upgrades work
+ the linux-mub meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-headers-4.11.0-50-bfq
+Package: linux-headers-4.9.0-340-mub
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-headers-4.11.0-50, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-4.9.0-340, ${shlibs:Depends}
 Provides: linux-headers, linux-headers-3.0
-Description: Linux kernel headers for version 4.11.0 on 64 bit x86 SMP
- This package provides kernel header files for version 4.11.0 on
+Description: Linux kernel headers for version 4.9.0 on 64 bit x86 SMP
+ This package provides kernel header files for version 4.9.0 on
  64 bit x86 SMP.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-4.11.0-50/debian.README.gz for details.
+ /usr/share/doc/linux-headers-4.9.0-340/debian.README.gz for details.
 
-Package: linux-image-4.11.0-50-bfq-dbgsym
+Package: linux-image-4.9.0-340-mub-dbgsym
 Architecture: i386 amd64
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}
 Provides: linux-debug
-Description: Linux kernel debug image for version 4.11.0 on 64 bit x86 SMP
- This package provides a kernel debug image for version 4.11.0 on
+Description: Linux kernel debug image for version 4.9.0 on 64 bit x86 SMP
+ This package provides a kernel debug image for version 4.9.0 on
  64 bit x86 SMP.
  .
  This is for sites that wish to debug the kernel.
@@ -196,28 +196,28 @@ Description: Linux kernel debug image for version 4.11.0 on 64 bit x86 SMP
  is uncompressed, and unstripped. This package also includes the
  unstripped modules.
 
-Package: linux-tools-4.11.0-50-bfq
+Package: linux-tools-4.9.0-340-mub
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-tools-4.11.0-50
-Description: Linux kernel version specific tools for version 4.11.0-50
+Depends: ${misc:Depends}, linux-tools-4.9.0-340
+Description: Linux kernel version specific tools for version 4.9.0-340
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.11.0-50 on
+ version 4.9.0-340 on
  64 bit x86.
 
-Package: linux-cloud-tools-4.11.0-50-bfq
+Package: linux-cloud-tools-4.9.0-340-mub
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-cloud-tools-4.11.0-50
-Description: Linux kernel version specific cloud tools for version 4.11.0-50
+Depends: ${misc:Depends}, linux-cloud-tools-4.9.0-340
+Description: Linux kernel version specific cloud tools for version 4.9.0-340
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud for version 4.11.0-50 on
+ version locked tools for cloud for version 4.9.0-340 on
  64 bit x86.
 
-Package: linux-udebs-bfq
+Package: linux-udebs-mub
 XC-Package-Type: udeb
 Section: debian-installer
 Architecture: i386 amd64
@@ -227,11 +227,11 @@ Description: Metapackage depending on kernel udebs
  for easier version and migration tracking.
 
 
-Package: kernel-image-4.11.0-50-generic-di
+Package: kernel-image-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: kernel-image, efi-modules, ext3-modules, ext4-modules
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: extra
 Description: Linux kernel binary image for the Debian installer
@@ -239,369 +239,369 @@ Description: Linux kernel binary image for the Debian installer
  boot images. It does _not_ provide a usable kernel for your full
  Debian system.
 
-Package: nic-modules-4.11.0-50-generic-di
+Package: nic-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: nic-modules
-Depends: kernel-image-4.11.0-50-generic-di, nic-shared-modules-4.11.0-50-generic-di, virtio-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, nic-shared-modules-4.9.0-340-generic-di, virtio-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Network interface support
 
-Package: nic-shared-modules-4.11.0-50-generic-di
+Package: nic-shared-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: nic-shared-modules
-Depends: kernel-image-4.11.0-50-generic-di, crypto-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, crypto-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: nic shared modules
   This package contains modules which support nic modules
 
-Package: serial-modules-4.11.0-50-generic-di
+Package: serial-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: serial-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Serial port support
 
-Package: ppp-modules-4.11.0-50-generic-di
+Package: ppp-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: ppp-modules
-Depends: kernel-image-4.11.0-50-generic-di, nic-shared-modules-4.11.0-50-generic-di, serial-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, nic-shared-modules-4.9.0-340-generic-di, serial-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: PPP (serial port) networking support
 
-Package: pata-modules-4.11.0-50-generic-di
+Package: pata-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: pata-modules
-Depends: kernel-image-4.11.0-50-generic-di, storage-core-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, storage-core-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: PATA support modules
 
-Package: firewire-core-modules-4.11.0-50-generic-di
+Package: firewire-core-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: firewire-core-modules
-Depends: kernel-image-4.11.0-50-generic-di, storage-core-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, storage-core-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Firewire (IEEE-1394) Support
 
-Package: scsi-modules-4.11.0-50-generic-di
+Package: scsi-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: scsi-modules
-Depends: kernel-image-4.11.0-50-generic-di, storage-core-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, storage-core-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: SCSI storage support
 
-Package: plip-modules-4.11.0-50-generic-di
+Package: plip-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: plip-modules
-Depends: kernel-image-4.11.0-50-generic-di, nic-shared-modules-4.11.0-50-generic-di, parport-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, nic-shared-modules-4.9.0-340-generic-di, parport-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: PLIP (parallel port) networking support
 
-Package: floppy-modules-4.11.0-50-generic-di
+Package: floppy-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: floppy-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Floppy driver support
 
-Package: fat-modules-4.11.0-50-generic-di
+Package: fat-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: fat-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: FAT filesystem support
  This includes Windows FAT and VFAT support.
 
-Package: nfs-modules-4.11.0-50-generic-di
+Package: nfs-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: nfs-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: NFS filesystem drivers
  Includes the NFS client driver, and supporting modules.
 
-Package: md-modules-4.11.0-50-generic-di
+Package: md-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: md-modules, crypto-dm-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Multi-device support (raid, device-mapper, lvm)
 
-Package: multipath-modules-4.11.0-50-generic-di
+Package: multipath-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: multipath-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: extra
 Description: DM-Multipath support
   This package contains modules for device-mapper multipath support.
 
-Package: usb-modules-4.11.0-50-generic-di
+Package: usb-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: usb-modules
-Depends: kernel-image-4.11.0-50-generic-di, storage-core-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, storage-core-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Core USB support
 
-Package: pcmcia-storage-modules-4.11.0-50-generic-di
+Package: pcmcia-storage-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: pcmcia-storage-modules
-Depends: kernel-image-4.11.0-50-generic-di, scsi-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, scsi-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: PCMCIA storage support
 
-Package: fb-modules-4.11.0-50-generic-di
+Package: fb-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: fb-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Framebuffer modules
 
-Package: input-modules-4.11.0-50-generic-di
+Package: input-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: input-modules
-Depends: kernel-image-4.11.0-50-generic-di, usb-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, usb-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Support for various input methods
 
-Package: mouse-modules-4.11.0-50-generic-di
+Package: mouse-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: mouse-modules
-Depends: kernel-image-4.11.0-50-generic-di, input-modules-4.11.0-50-generic-di, usb-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, input-modules-4.9.0-340-generic-di, usb-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: extra
 Description: Mouse support
  This package contains mouse drivers for the Linux kernel.
 
-Package: irda-modules-4.11.0-50-generic-di
+Package: irda-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: irda-modules
-Depends: kernel-image-4.11.0-50-generic-di, nic-shared-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, nic-shared-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Support for Infrared protocols
 
-Package: parport-modules-4.11.0-50-generic-di
+Package: parport-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: parport-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Parallel port support
 
-Package: nic-pcmcia-modules-4.11.0-50-generic-di
+Package: nic-pcmcia-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: nic-pcmcia-modules
-Depends: kernel-image-4.11.0-50-generic-di, nic-shared-modules-4.11.0-50-generic-di, nic-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, nic-shared-modules-4.9.0-340-generic-di, nic-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: PCMCIA network interface support
 
-Package: pcmcia-modules-4.11.0-50-generic-di
+Package: pcmcia-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: pcmcia-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: PCMCIA Modules
 
-Package: nic-usb-modules-4.11.0-50-generic-di
+Package: nic-usb-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: nic-usb-modules
-Depends: kernel-image-4.11.0-50-generic-di, nic-shared-modules-4.11.0-50-generic-di, usb-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, nic-shared-modules-4.9.0-340-generic-di, usb-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: USB network interface support
 
-Package: sata-modules-4.11.0-50-generic-di
+Package: sata-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: sata-modules
-Depends: kernel-image-4.11.0-50-generic-di, storage-core-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, storage-core-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: SATA storage support
 
-Package: crypto-modules-4.11.0-50-generic-di
+Package: crypto-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: crypto-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: extra
 Description: crypto modules
  This package contains crypto modules.
 
-Package: squashfs-modules-4.11.0-50-generic-di
+Package: squashfs-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: squashfs-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: extra
 Description: squashfs modules
  This package contains squashfs modules.
 
-Package: speakup-modules-4.11.0-50-generic-di
+Package: speakup-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: speakup-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: extra
 Description: speakup modules
  This package contains speakup modules.
 
-Package: virtio-modules-4.11.0-50-generic-di
+Package: virtio-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: virtio-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: VirtIO Modules
  Includes modules for VirtIO (virtual machine, generally kvm guests)
 
-Package: fs-core-modules-4.11.0-50-generic-di
+Package: fs-core-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: fs-core-modules, ext2-modules, jfs-modules, reiserfs-modules, xfs-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Base filesystem modules
  This includes jfs, reiserfs and xfs.
 
-Package: fs-secondary-modules-4.11.0-50-generic-di
+Package: fs-secondary-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: fs-secondary-modules, btrfs-modules, ntfs-modules, hfs-modules
-Depends: kernel-image-4.11.0-50-generic-di, fat-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, fat-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Extra filesystem modules
  This includes support for Windows NTFS and MacOS HFS/HFSPlus
 
-Package: storage-core-modules-4.11.0-50-generic-di
+Package: storage-core-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: storage-core-modules, loop-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Core storage support
  Includes core SCSI, LibATA, USB-Storage. Also includes related block
  devices for CD, Disk and Tape medium (and IDE Floppy).
 
-Package: block-modules-4.11.0-50-generic-di
+Package: block-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: block-modules, nbd-modules
-Depends: kernel-image-4.11.0-50-generic-di, storage-core-modules-4.11.0-50-generic-di, parport-modules-4.11.0-50-generic-di, virtio-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, storage-core-modules-4.9.0-340-generic-di, parport-modules-4.9.0-340-generic-di, virtio-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Block storage devices
  This package contains the block storage devices, including DAC960 and
  paraide.
 
-Package: message-modules-4.11.0-50-generic-di
+Package: message-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: message-modules
-Depends: kernel-image-4.11.0-50-generic-di, storage-core-modules-4.11.0-50-generic-di, scsi-modules-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di, storage-core-modules-4.9.0-340-generic-di, scsi-modules-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: Fusion and i2o storage modules
  This package containes the fusion and i2o storage modules.
 
-Package: vlan-modules-4.11.0-50-generic-di
+Package: vlan-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: vlan-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: extra
 Description: vlan modules
  This package contains vlan (8021.Q) modules.
 
-Package: ipmi-modules-4.11.0-50-generic-di
+Package: ipmi-modules-4.9.0-340-generic-di
 Package-Type: udeb
 Provides: ipmi-modules
-Depends: kernel-image-4.11.0-50-generic-di
+Depends: kernel-image-4.9.0-340-generic-di
 Architecture: amd64
-Kernel-Version: 4.11.0-50-generic
+Kernel-Version: 4.9.0-340-generic
 Section: debian-installer
 Priority: standard
 Description: ipmi modules
