@@ -1,3 +1,12 @@
+linux (4.11.0-80.201707032254) xenial; urgency=medium
+
+  * Upstream 4.11.8
+  * I/O block scheduler: BFQ v8r11 (default)
+  * Low-Latency Desktop
+  * Frequency Timer: 300Hz
+
+ -- NikTh <nick-athens30@ubuntu.com>  Mon, 03 Jul 2017 22:54:53 +0300
+
 linux (4.11.0-70.201706241836) xenial; urgency=medium
 
   * Upstream 4.11.7

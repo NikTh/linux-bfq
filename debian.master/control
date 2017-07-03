@@ -46,7 +46,7 @@ Description: Linux kernel specific documentation for version 4.11.0
  /usr/share/doc/linux-doc/00-INDEX for a list of what is
  contained in each file.
 
-Package: linux-headers-4.11.0-70
+Package: linux-headers-4.11.0-80
 Architecture: all
 Multi-Arch: foreign
 Section: devel
@@ -55,7 +55,7 @@ Depends: ${misc:Depends}, coreutils | fileutils (>= 4.0)
 Description: Header files related to Linux kernel version 4.11.0
  This package provides kernel header files for version 4.11.0, for sites
  that want the latest kernel headers. Please read
- /usr/share/doc/linux-headers-4.11.0-70/debian.README.gz for details
+ /usr/share/doc/linux-headers-4.11.0-80/debian.README.gz for details
 
 Package: linux-libc-dev
 Architecture: i386 amd64 armhf arm64 x32 powerpc ppc64el
@@ -83,17 +83,17 @@ Description: Linux kernel version specific tools for version 4.11.0
  version locked tools (such as perf and x86_energy_perf_policy) for
  version PGKVER.
 
-Package: linux-tools-4.11.0-70
+Package: linux-tools-4.11.0-80
 Architecture: i386 amd64 armhf arm64 powerpc ppc64el
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-tools-common
-Description: Linux kernel version specific tools for version 4.11.0-70
+Description: Linux kernel version specific tools for version 4.11.0-80
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.11.0-70 on
+ version 4.11.0-80 on
  64 bit x86.
- You probabally want to install linux-tools-4.11.0-70-<flavour>.
+ You probabally want to install linux-tools-4.11.0-80-<flavour>.
 
 Package: linux-cloud-tools-common
 Architecture: all
@@ -108,19 +108,19 @@ Description: Linux kernel version specific cloud tools for version 4.11.0
  This package provides the architecture independent parts for kernel
  version locked tools for cloud tools for version PGKVER.
 
-Package: linux-cloud-tools-4.11.0-70
+Package: linux-cloud-tools-4.11.0-80
 Architecture: i386 amd64 armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-cloud-tools-common
-Description: Linux kernel version specific cloud tools for version 4.11.0-70
+Description: Linux kernel version specific cloud tools for version 4.11.0-80
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud tools for version 4.11.0-70 on
+ version locked tools for cloud tools for version 4.11.0-80 on
  64 bit x86.
- You probabally want to install linux-cloud-tools-4.11.0-70-<flavour>.
+ You probabally want to install linux-cloud-tools-4.11.0-80-<flavour>.
 
 
-Package: linux-image-4.11.0-70-bfq
+Package: linux-image-4.11.0-80-bfq
 Architecture: i386 amd64
 Section: kernel
 Priority: optional
@@ -129,7 +129,7 @@ Provides: linux-image, linux-image-3.0, fuse-module, kvm-api-4, redhat-cluster-m
 Depends: ${misc:Depends}, ${shlibs:Depends}, initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
 Conflicts: hotplug (<< 0.0.20040105-1)
 Recommends: grub-pc [i386 amd64 x32] | grub-efi-amd64 [amd64 x32] | grub-efi-ia32 [i386 amd64 x32] | grub [i386 amd64 x32] | lilo (>= 19.1) [i386 amd64 x32] | flash-kernel [armhf arm64] | grub-ieee1275 [ppc64el]
-Suggests: fdutils, linux-doc-4.11.0 | linux-source-4.11.0, linux-tools, linux-headers-4.11.0-70-bfq
+Suggests: fdutils, linux-doc-4.11.0 | linux-source-4.11.0, linux-tools, linux-headers-4.11.0-80-bfq
 Description: Linux kernel image for version 4.11.0 on 64 bit x86 SMP
  This package contains the Linux kernel image for version 4.11.0 on
  64 bit x86 SMP.
@@ -146,11 +146,11 @@ Description: Linux kernel image for version 4.11.0 on 64 bit x86 SMP
  the linux-bfq meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-image-extra-4.11.0-70-bfq
+Package: linux-image-extra-4.11.0-80-bfq
 Architecture: i386 amd64
 Section: kernel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.11.0-70-bfq, crda (>=1.1.1-1ubuntu2) | wireless-crda
+Depends: ${misc:Depends}, ${shlibs:Depends}, linux-image-4.11.0-80-bfq, crda (>=1.1.1-1ubuntu2) | wireless-crda
 Description: Linux kernel extra modules for version 4.11.0 on 64 bit x86 SMP
  This package contains the Linux kernel extra modules for version 4.11.0 on
  64 bit x86 SMP.
@@ -167,20 +167,20 @@ Description: Linux kernel extra modules for version 4.11.0 on 64 bit x86 SMP
  the linux-bfq meta-package, which will ensure that upgrades work
  correctly, and that supporting packages are also installed.
 
-Package: linux-headers-4.11.0-70-bfq
+Package: linux-headers-4.11.0-80-bfq
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-headers-4.11.0-70, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-4.11.0-80, ${shlibs:Depends}
 Provides: linux-headers, linux-headers-3.0
 Description: Linux kernel headers for version 4.11.0 on 64 bit x86 SMP
  This package provides kernel header files for version 4.11.0 on
  64 bit x86 SMP.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/linux-headers-4.11.0-70/debian.README.gz for details.
+ /usr/share/doc/linux-headers-4.11.0-80/debian.README.gz for details.
 
-Package: linux-image-4.11.0-70-bfq-dbgsym
+Package: linux-image-4.11.0-80-bfq-dbgsym
 Architecture: i386 amd64
 Section: devel
 Priority: optional
@@ -196,25 +196,25 @@ Description: Linux kernel debug image for version 4.11.0 on 64 bit x86 SMP
  is uncompressed, and unstripped. This package also includes the
  unstripped modules.
 
-Package: linux-tools-4.11.0-70-bfq
+Package: linux-tools-4.11.0-80-bfq
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-tools-4.11.0-70
-Description: Linux kernel version specific tools for version 4.11.0-70
+Depends: ${misc:Depends}, linux-tools-4.11.0-80
+Description: Linux kernel version specific tools for version 4.11.0-80
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
- version 4.11.0-70 on
+ version 4.11.0-80 on
  64 bit x86.
 
-Package: linux-cloud-tools-4.11.0-70-bfq
+Package: linux-cloud-tools-4.11.0-80-bfq
 Architecture: i386 amd64
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, linux-cloud-tools-4.11.0-70
-Description: Linux kernel version specific cloud tools for version 4.11.0-70
+Depends: ${misc:Depends}, linux-cloud-tools-4.11.0-80
+Description: Linux kernel version specific cloud tools for version 4.11.0-80
  This package provides the architecture dependant parts for kernel
- version locked tools for cloud for version 4.11.0-70 on
+ version locked tools for cloud for version 4.11.0-80 on
  64 bit x86.
 
 Package: linux-udebs-bfq
